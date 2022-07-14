@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vnexpress</title>
+    <link rel="icon" href="./assets/image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="./assets/css/slide.css">
+    <script type="module" src="./scripts/checkLogin.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="grid wide">
+                    <!-- Header Mobile & Search -->
+                    <div class="header__navbar-mobile">
+                        
+                        <a href="#" class="navbar-logo">
+                            <img  src="./assets/image/logo_2.png" class="navbar-logo-icon" alt="">
+                        </a>
+                        <label for="search-bar-mobile-on-off" class="navbar-mobile-search">
+                            <ion-icon class="navbar-mobile-search-icon" name="search"></ion-icon>
+                            <div class="navbar-mobile-search-text">Tìm kiếm</div>
+                        </label>
+
+                        <input type="checkbox" name="" id="search-bar-mobile-on-off" hidden>
+
+                        <div class="search-mobile">
+                            <div class="search-mobile-top">
+                                <label for="search-bar-mobile-on-off"><ion-icon class="search-mobile-top-icon" name="chevron-back-outline"></ion-icon></label>
+                                <form action="" class="search-mobile-top-form">
+                                    <input type="reset" value="Reset" id="del-input-search" hidden>
+                                    <input type="text" placeholder="Tìm kiếm" autofocus class="search-mobile-top-input">
+                                    <label for="del-input-search" class="search-mobile-top-close">
+                                        <ion-icon class="search-mobile-top-close-icon" name="close-outline"></ion-icon>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="search-mobile-top-body">
+                                <div class="search-bar-location-heading">MỌI LÚC, MỌI NƠI</div>
+                                <button class="search-bar-location-btn">
+                                    <a href="#" class="search-bar-location-link">
+                                        <div class="search-bar-location-text">Lướt xem tin mới</div>
+                                        <ion-icon class="search-bar-location-icon" name="chevron-forward-outline"></ion-icon>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Header & Search -->
+                    <div class="header__navbar">
+                        <a href="#" class="navbar-logo">
+                            <img  src="./assets/image/logo_2.png" class="navbar-logo-icon" alt="">
+                        </a>
+                        <button class="navbar-s-search">
+                            <div class="search-btn-text">Bắt đầu tìm kiếm</div>
+                            <ion-icon class="search-btn-icon" name="search"></ion-icon>
+                        </button>
+
+                        <div class="navbar-search">
+                            <input type="radio" name="search-selector" id="search-selector-local" checked hidden>
+                            <label for="search-selector-local" class="navbar-search-title">Trải nghiệm</label>
+
+                            <input type="radio" name="search-selector" id="search-selector-discovery" hidden>
+                            <label for="search-selector-discovery" class="navbar-search-title">Bóng đá</label>
+                            
+                            <div class="navbar-search-title">
+                                <a href="#" class="navbar-search-link">Du lịch</a>
+                            </div>
+                            <div class="search-bar">
+                                <div class="search-bar-item">
+                                    <div class="search-bar-item__header">Tin hot</div>
+                                    <form action="" class="form-search">
+                                        <input type="reset" value="Reset" id="del-input" hidden>
+                                        <input type="text" class="search-bar-item__input" placeholder="Xem gì hôm nay?">
+                                        <label for="del-input" class="search-del-close">
+                                            <ion-icon class="search-del-close-icon" name="close-outline"></ion-icon>
+                                        </label>
+                                    </form>
+                                    
+                                    <div class="search-bar-location search-bar-item-child">
+                                        <div class="search-bar-location-heading">MỌI LÚC, MỌI NƠI</div>
+                                        <button class="search-bar-location-btn">
+                                            <a href="#" class="search-bar-location-link">
+                                                <div class="search-bar-location-text">Tìm kiếm linh hoạt</div>
+                                                <ion-icon class="search-bar-location-icon" name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Location -->
+                                <div class="search-bar-item search-bar-item--location">
+                                    <div class="search-bar-item__header">Lịch truyền hình</div>
+                                    <label for="datetimerange_checkbox" class="search-bar-item__dsc">Thêm ngày</label>
+                                    <div class="search-bar-checkin search-bar-item-child">
+                                        <div class="calendar-tab">
+                                            <div class="carlendar__header js-checkin-tab-item checkin-tab-item--active">Chọn lịch chiếu bạn đang quan tâm</div>
+                                            <!-- <div class="carlendar__header js-checkin-tab-item">Ngày linh hoạt</div> -->
+                                        </div>
+                                        <div class="grid content-tab">
+                                            <div class="row calendar-main js-checkin-tab-pane checkin-tab-pane--active">
+                                                <!-- <div class="col l-12 l-m-12 m-7 carlendar__month-icon">
+                                                    <ion-icon class="carlendar__month-icon-back" name="chevron-back-outline"></ion-icon>
+                                                    <ion-icon class="carlendar__month-icon-next" name="chevron-forward-outline"></ion-icon>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-6 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 9 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">5</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">10</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">12</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">17</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-0 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 10 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">3</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">10</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">12</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">17</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">31</div>
+                                                    </div>
+                                                </div> -->
+                                                <!-- <input type="text" class="datetimerange" id="datetimerange_checkbox" hidden  value="02/07/2022"/> -->
+                                                <input type="datetime" id="dateTime" hidden/>
+                                                <input type="datetime" id="dateTime_1" hidden/>
+                                                
+                                            </div>
+                                        
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-bar-item search-bar-item--location">
+                                    <div class="search-bar-item__header">Sự kiện</div>
+                                    <div class="search-bar-item__dsc">Thêm ngày</div>
+                                    <div class="search-bar-checkout search-bar-item-child">
+                                        <div class="calendar-tab">
+                                            <div class="carlendar__header js-checkout-tab-item checkout-tab-item--active">Sự kiện vừa qua</div>
+                                            <div class="carlendar__header js-checkout-tab-item">Sự kiện hôm nay</div>
+                                        </div>
+                                        <div class="grid content-tab">
+                                            
+                                            <div class="flexible-main js-checkout-tab-pane checkout-tab-pane--active">
+                                                <div class="flexible__header">Bạn đã bỏ lỡ điều gì vừa qua?</div>
+                                                <div class="flexible__how_long">
+                                                    <input type="radio" name="checkout-flexible-how-long" id="checkout-select-weekend" checked hidden>
+                                                    <label for="checkout-select-weekend" class="flexible__how_long-item">Hôm qua</label>
+                                                    <input type="radio" name="checkout-flexible-how-long" id="checkout-select-1-weekend" hidden>
+                                                    <label for="checkout-select-1-weekend" class="flexible__how_long-item">Tuần qua</label>
+                                                    <input type="radio" name="checkout-flexible-how-long" id="checkout-select-1-month" hidden>
+                                                    <label for="checkout-select-1-month" class="flexible__how_long-item">Tháng qua</label>
+                                                </div>
+                                                <div class="flexible__header">Cùng nhìn xem chúng ta đã trải qua những gì?</div>
+                                                <div class="row flexible__when">
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-1" hidden checked>
+                                                        <label for="checkout-check-when-1" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 9</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-2" hidden>
+                                                        <label for="checkout-check-when-2" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 10</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-3" hidden>
+                                                        <label for="checkout-check-when-3" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 11</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-4" hidden>
+                                                        <label for="checkout-check-when-4" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 12</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-5" hidden>
+                                                        <label for="checkout-check-when-5" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 1</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-6" hidden>
+                                                        <label for="checkout-check-when-6" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 2</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row calendar-main js-checkout-tab-pane">
+                                                <input name="dateTime_2" type="text" id="dateTime_2" value hidden/>
+                                                <input name="dateTime_3" type="text" id="dateTime_3" value hidden>
+
+                                                <!-- From:<input name="from1" id="from1" type="text">
+                                                To:<input name="to1" id="to1" type="text"> -->
+                                                <!-- How Many:<input name="howManyNights" id="howManyNights" type="text">
+                                                <button onclick="getDays()">Get Days</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-bar-item search-bar-item--location">
+                                    <div class="search-bar-item__header">Từ khóa</div>
+                                    <!-- <div class="search-bar-item__dsc">Thêm khách</div> -->
+                                    <input type="text" class="search-bar-item__input" placeholder="Tags">
+
+                                    
+                                </div>
+                                <!-- Discovery -->
+                                <div class="search-bar-item search-bar-item--discovery">
+                                    <div class="search-bar-item__header">Lịch bóng đá - Kết quả</div>
+                                    <div class="search-bar-item__dsc">Chọn lịch và đội bóng bạn đang quan tâm </div>
+                                    <div class="search-bar-day search-bar-item-child">
+                                        <div class="calendar-tab">
+                                            <div class="carlendar__header js-day-tab-item day-tab-item--active">Lịch bóng đá</div>
+                                            <div class="carlendar__header js-day-tab-item">Kênh theo dõi</div>
+                                        </div>
+                                        <div class="grid content-tab">
+                                            <div class="row calendar-main js-day-tab-pane day-tab-pane--active">
+                                                <input name="dateTime_4" type="text" id="dateTime_2" value hidden/>
+                                                <input name="dateTime_5" type="text" id="dateTime_3" value hidden>
+                                            </div>
+                                        
+                                            <div class="flexible-main js-day-tab-pane">
+                                                <div class="flexible__header">Đăng ký dài hạn</div>
+                                                <div class="flexible__how_long">
+                                                    <input type="radio" name="day-flexible-how-long" id="day-select-weekend" checked hidden>
+                                                    <label for="day-select-weekend" class="flexible__how_long-item">Cuối tuần</label>
+                                                    <input type="radio" name="day-flexible-how-long" id="day-select-1-weekend" hidden>
+                                                    <label for="day-select-1-weekend" class="flexible__how_long-item">1 tuần</label>
+                                                    <input type="radio" name="day-flexible-how-long" id="day-select-1-month" hidden>
+                                                    <label for="day-select-1-month" class="flexible__how_long-item">1 tháng</label>
+                                                </div>
+                                                <div class="flexible__header ">Chọn đội bóng yêu thích</div>
+                                                <div class="row flexible__when favorite_club">
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-1" hidden checked>
+                                                        <label for="day-check-when-1" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/club/real.png" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/club/real.png" alt="">
+                                                            <div class="flexible__when-text">Real Marid</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-2" hidden>
+                                                        <label for="day-check-when-2" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/club/mu.png" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/club/mu.png" alt="">
+                                                            <div class="flexible__when-text">Man United</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-3" hidden>
+                                                        <label for="day-check-when-3" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/club/bay.png" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/club/bay.png" alt="">
+                                                            <div class="flexible__when-text">Bayern</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-4" hidden>
+                                                        <label for="day-check-when-4" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/club/barca.png" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/club/barca.png" alt="">
+                                                            <div class="flexible__when-text">Barcalona</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-5" hidden>
+                                                        <label for="day-check-when-5" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/club/manct.png" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/club/manct.png" alt="">
+                                                            <div class="flexible__when-text">Man City</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-6" hidden>
+                                                        <label for="day-check-when-6" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/club/chel.png" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/club/chel.png" alt="">
+                                                            <div class="flexible__when-text">Chelsea</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="search-bar-btn">
+                                    <ion-icon class="search-bar-btn-icon" name="search-outline"></ion-icon>
+                                    <div class="search-bar-btn-text">Tìm kiếm</div>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="navbar-user">
+                            <div class="navbar-user-title">
+                                <a href="#" class="navbar-user-link">Trở thành người viết bài</a>
+                            </div>
+
+                            <label for="region-on-off" class="navbar-user-region">
+                                <ion-icon class="navbar-user-region-icon" name="earth-sharp"></ion-icon>
+                            </label>
+                            
+                        
+
+
+                            <!-- Lúc chưa đăng nhập -->
+                            
+                            <!-- <div tabindex="0" class="navbar-user-button">
+                                <ion-icon class="navbar-user-button-icon-bar" name="menu"></ion-icon>
+                                <ion-icon class="navbar-user-button-icon-avatar" name="person-circle"></ion-icon>
+                            </div>
+
+                            <ul class="user-profile-menu">
+                                <li class="user-profile-menu-item">
+                                    <label for="register-on-off" class="user-profile-menu-link text-bold user-signup">Đăng ký</label>
+                                </li>
+                                <li class="user-profile-menu-item user-login">
+                                    <label for="register-on-off" class="user-profile-menu-link">Đăng nhập</label>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <div class="user-profile-menu-item-line"></div>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Đăng ký báo tin</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Tổ chức trải nghiệm</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Trợ giúp</a>
+                                </li>
+                            </ul> -->
+
+                            <input type="checkbox" id="register-on-off" hidden>
+
+                            <!-- Form Đăng nhập / Đăng ký -->
+                            <div class="form-register">
+                                <label for="register-on-off" class="register__overlay"></label>
+                                <div class="register__body">
+                                    <label for="register-on-off" class="register__close">
+                                        <ion-icon class="register__close-icon" name="close-outline"></ion-icon>
+                                    </label>
+                                    <div class="register__heading">
+                                        Đăng nhập hoặc đăng ký
+                                    </div>
+                                    <div class="register__form">
+                                        <div class="register__form-title">Chào mừng bạn đến với Airbnb</div>
+                                        <div class="register__form-form">
+                                            <div class="register__form-group">
+                                                <label for="code-country" class="register__form-group-title">Quốc gia/Khu vực</label>
+                                                <select id="code-country" class="register__form-droplist" name="countryCode">
+                                                    <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                                                    <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                                                    <option data-countryCode="AO" value="244">Angola (+244)</option>
+                                                    <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                                                    <option data-countryCode="AG" value="1268">Antigua Barbuda (+1268)</option>
+                                                    <option data-countryCode="AR" value="54">Argentina (+54)</option>
+                                                    <option data-countryCode="AM" value="374">Armenia (+374)</option>
+                                                    <option data-countryCode="AW" value="297">Aruba (+297)</option>
+                                                    <option data-countryCode="AU" value="61">Australia (+61)</option>
+                                                    <option data-countryCode="AT" value="43">Austria (+43)</option>
+                                                    <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+                                                    <option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
+                                                    <option data-countryCode="BH" value="973">Bahrain (+973)</option>
+                                                    <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
+                                                    <option data-countryCode="BB" value="1246">Barbados (+1246)</option>
+                                                    <option data-countryCode="BY" value="375">Belarus (+375)</option>
+                                                    <option data-countryCode="BE" value="32">Belgium (+32)</option>
+                                                    <option data-countryCode="BZ" value="501">Belize (+501)</option>
+                                                    <option data-countryCode="BJ" value="229">Benin (+229)</option>
+                                                    <option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
+                                                    <option data-countryCode="BT" value="975">Bhutan (+975)</option>
+                                                    <option data-countryCode="BO" value="591">Bolivia (+591)</option>
+                                                    <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
+                                                    <option data-countryCode="BW" value="267">Botswana (+267)</option>
+                                                    <option data-countryCode="BR" value="55">Brazil (+55)</option>
+                                                    <option data-countryCode="BN" value="673">Brunei (+673)</option>
+                                                    <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
+                                                    <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
+                                                    <option data-countryCode="BI" value="257">Burundi (+257)</option>
+                                                    <option data-countryCode="KH" value="855">Cambodia (+855)</option>
+                                                    <option data-countryCode="CM" value="237">Cameroon (+237)</option>
+                                                    <option data-countryCode="CA" value="1">Canada (+1)</option>
+                                                    <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
+                                                    <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
+                                                    <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+                                                    <option data-countryCode="CL" value="56">Chile (+56)</option>
+                                                    <option data-countryCode="CN" value="86">China (+86)</option>
+                                                    <option data-countryCode="CO" value="57">Colombia (+57)</option>
+                                                    <option data-countryCode="KM" value="269">Comoros (+269)</option>
+                                                    <option data-countryCode="CG" value="242">Congo (+242)</option>
+                                                    <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
+                                                    <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
+                                                    <option data-countryCode="HR" value="385">Croatia (+385)</option>
+                                                    <option data-countryCode="CU" value="53">Cuba (+53)</option>
+                                                    <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
+                                                    <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
+                                                    <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+                                                    <option data-countryCode="DK" value="45">Denmark (+45)</option>
+                                                    <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
+                                                    <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
+                                                    <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
+                                                    <option data-countryCode="EC" value="593">Ecuador (+593)</option>
+                                                    <option data-countryCode="EG" value="20">Egypt (+20)</option>
+                                                    <option data-countryCode="SV" value="503">El Salvador (+503)</option>
+                                                    <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
+                                                    <option data-countryCode="ER" value="291">Eritrea (+291)</option>
+                                                    <option data-countryCode="EE" value="372">Estonia (+372)</option>
+                                                    <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+                                                    <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+                                                    <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
+                                                    <option data-countryCode="FJ" value="679">Fiji (+679)</option>
+                                                    <option data-countryCode="FI" value="358">Finland (+358)</option>
+                                                    <option data-countryCode="FR" value="33">France (+33)</option>
+                                                    <option data-countryCode="GF" value="594">French Guiana (+594)</option>
+                                                    <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
+                                                    <option data-countryCode="GA" value="241">Gabon (+241)</option>
+                                                    <option data-countryCode="GM" value="220">Gambia (+220)</option>
+                                                    <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
+                                                    <option data-countryCode="DE" value="49">Germany (+49)</option>
+                                                    <option data-countryCode="GH" value="233">Ghana (+233)</option>
+                                                    <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
+                                                    <option data-countryCode="GR" value="30">Greece (+30)</option>
+                                                    <option data-countryCode="GL" value="299">Greenland (+299)</option>
+                                                    <option data-countryCode="GD" value="1473">Grenada (+1473)</option>
+                                                    <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
+                                                    <option data-countryCode="GU" value="671">Guam (+671)</option>
+                                                    <option data-countryCode="GT" value="502">Guatemala (+502)</option>
+                                                    <option data-countryCode="GN" value="224">Guinea (+224)</option>
+                                                    <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
+                                                    <option data-countryCode="GY" value="592">Guyana (+592)</option>
+                                                    <option data-countryCode="HT" value="509">Haiti (+509)</option>
+                                                    <option data-countryCode="HN" value="504">Honduras (+504)</option>
+                                                    <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
+                                                    <option data-countryCode="HU" value="36">Hungary (+36)</option>
+                                                    <option data-countryCode="IS" value="354">Iceland (+354)</option>
+                                                    <option data-countryCode="IN" value="91">India (+91)</option>
+                                                    <option data-countryCode="ID" value="62">Indonesia (+62)</option>
+                                                    <option data-countryCode="IR" value="98">Iran (+98)</option>
+                                                    <option data-countryCode="IQ" value="964">Iraq (+964)</option>
+                                                    <option data-countryCode="IE" value="353">Ireland (+353)</option>
+                                                    <option data-countryCode="IL" value="972">Israel (+972)</option>
+                                                    <option data-countryCode="IT" value="39">Italy (+39)</option>
+                                                    <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
+                                                    <option data-countryCode="JP" value="81">Japan (+81)</option>
+                                                    <option data-countryCode="JO" value="962">Jordan (+962)</option>
+                                                    <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
+                                                    <option data-countryCode="KE" value="254">Kenya (+254)</option>
+                                                    <option data-countryCode="KI" value="686">Kiribati (+686)</option>
+                                                    <option data-countryCode="KP" value="850">Korea North (+850)</option>
+                                                    <option data-countryCode="KR" value="82">Korea South (+82)</option>
+                                                    <option data-countryCode="KW" value="965">Kuwait (+965)</option>
+                                                    <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
+                                                    <option data-countryCode="LA" value="856">Laos (+856)</option>
+                                                    <option data-countryCode="LV" value="371">Latvia (+371)</option>
+                                                    <option data-countryCode="LB" value="961">Lebanon (+961)</option>
+                                                    <option data-countryCode="LS" value="266">Lesotho (+266)</option>
+                                                    <option data-countryCode="LR" value="231">Liberia (+231)</option>
+                                                    <option data-countryCode="LY" value="218">Libya (+218)</option>
+                                                    <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+                                                    <option data-countryCode="LT" value="370">Lithuania (+370)</option>
+                                                    <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
+                                                    <option data-countryCode="MO" value="853">Macao (+853)</option>
+                                                    <option data-countryCode="MK" value="389">Macedonia (+389)</option>
+                                                    <option data-countryCode="MG" value="261">Madagascar (+261)</option>
+                                                    <option data-countryCode="MW" value="265">Malawi (+265)</option>
+                                                    <option data-countryCode="MY" value="60">Malaysia (+60)</option>
+                                                    <option data-countryCode="MV" value="960">Maldives (+960)</option>
+                                                    <option data-countryCode="ML" value="223">Mali (+223)</option>
+                                                    <option data-countryCode="MT" value="356">Malta (+356)</option>
+                                                    <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
+                                                    <option data-countryCode="MQ" value="596">Martinique (+596)</option>
+                                                    <option data-countryCode="MR" value="222">Mauritania (+222)</option>
+                                                    <option data-countryCode="YT" value="269">Mayotte (+269)</option>
+                                                    <option data-countryCode="MX" value="52">Mexico (+52)</option>
+                                                    <option data-countryCode="FM" value="691">Micronesia (+691)</option>
+                                                    <option data-countryCode="MD" value="373">Moldova (+373)</option>
+                                                    <option data-countryCode="MC" value="377">Monaco (+377)</option>
+                                                    <option data-countryCode="MN" value="976">Mongolia (+976)</option>
+                                                    <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
+                                                    <option data-countryCode="MA" value="212">Morocco (+212)</option>
+                                                    <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
+                                                    <option data-countryCode="MN" value="95">Myanmar (+95)</option>
+                                                    <option data-countryCode="NA" value="264">Namibia (+264)</option>
+                                                    <option data-countryCode="NR" value="674">Nauru (+674)</option>
+                                                    <option data-countryCode="NP" value="977">Nepal (+977)</option>
+                                                    <option data-countryCode="NL" value="31">Netherlands (+31)</option>
+                                                    <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
+                                                    <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
+                                                    <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
+                                                    <option data-countryCode="NE" value="227">Niger (+227)</option>
+                                                    <option data-countryCode="NG" value="234">Nigeria (+234)</option>
+                                                    <option data-countryCode="NU" value="683">Niue (+683)</option>
+                                                    <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
+                                                    <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
+                                                    <option data-countryCode="NO" value="47">Norway (+47)</option>
+                                                    <option data-countryCode="OM" value="968">Oman (+968)</option>
+                                                    <option data-countryCode="PW" value="680">Palau (+680)</option>
+                                                    <option data-countryCode="PA" value="507">Panama (+507)</option>
+                                                    <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
+                                                    <option data-countryCode="PY" value="595">Paraguay (+595)</option>
+                                                    <option data-countryCode="PE" value="51">Peru (+51)</option>
+                                                    <option data-countryCode="PH" value="63">Philippines (+63)</option>
+                                                    <option data-countryCode="PL" value="48">Poland (+48)</option>
+                                                    <option data-countryCode="PT" value="351">Portugal (+351)</option>
+                                                    <option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
+                                                    <option data-countryCode="QA" value="974">Qatar (+974)</option>
+                                                    <option data-countryCode="RE" value="262">Reunion (+262)</option>
+                                                    <option data-countryCode="RO" value="40">Romania (+40)</option>
+                                                    <option data-countryCode="RU" value="7">Russia (+7)</option>
+                                                    <option data-countryCode="RW" value="250">Rwanda (+250)</option>
+                                                    <option data-countryCode="SM" value="378">San Marino (+378)</option>
+                                                    <option data-countryCode="ST" value="239">Sao Tome Principe (+239)</option>
+                                                    <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
+                                                    <option data-countryCode="SN" value="221">Senegal (+221)</option>
+                                                    <option data-countryCode="CS" value="381">Serbia (+381)</option>
+                                                    <option data-countryCode="SC" value="248">Seychelles (+248)</option>
+                                                    <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
+                                                    <option data-countryCode="SG" value="65">Singapore (+65)</option>
+                                                    <option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
+                                                    <option data-countryCode="SI" value="386">Slovenia (+386)</option>
+                                                    <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
+                                                    <option data-countryCode="SO" value="252">Somalia (+252)</option>
+                                                    <option data-countryCode="ZA" value="27">South Africa (+27)</option>
+                                                    <option data-countryCode="ES" value="34">Spain (+34)</option>
+                                                    <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
+                                                    <option data-countryCode="SH" value="290">St. Helena (+290)</option>
+                                                    <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
+                                                    <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+                                                    <option data-countryCode="SD" value="249">Sudan (+249)</option>
+                                                    <option data-countryCode="SR" value="597">Suriname (+597)</option>
+                                                    <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
+                                                    <option data-countryCode="SE" value="46">Sweden (+46)</option>
+                                                    <option data-countryCode="CH" value="41">Switzerland (+41)</option>
+                                                    <option data-countryCode="SI" value="963">Syria (+963)</option>
+                                                    <option data-countryCode="TW" value="886">Taiwan (+886)</option>
+                                                    <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
+                                                    <option data-countryCode="TH" value="66">Thailand (+66)</option>
+                                                    <option data-countryCode="TG" value="228">Togo (+228)</option>
+                                                    <option data-countryCode="TO" value="676">Tonga (+676)</option>
+                                                    <option data-countryCode="TT" value="1868">Trinidad Tobago (+1868)</option>
+                                                    <option data-countryCode="TN" value="216">Tunisia (+216)</option>
+                                                    <option data-countryCode="TR" value="90">Turkey (+90)</option>
+                                                    <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
+                                                    <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
+                                                    <option data-countryCode="TC" value="1649">Turks Caicos Islands (+1649)</option>
+                                                    <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
+                                                    <option data-countryCode="UG" value="256">Uganda (+256)</option>
+                                                    <option data-countryCode="GB" value="44">UK (+44)</option>
+                                                    <option data-countryCode="UA" value="380">Ukraine (+380)</option>
+                                                    <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+                                                    <option data-countryCode="UY" value="598">Uruguay (+598)</option>
+                                                    <option data-countryCode="US" value="1">USA (+1)</option>
+                                                    <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
+                                                    <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
+                                                    <option data-countryCode="VA" value="379">Vatican City (+379)</option>
+                                                    <option data-countryCode="VE" value="58">Venezuela (+58)</option>
+                                                    <option data-countryCode="VN" value="84" selected>Vietnam (+84)</option>
+                                                    <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
+                                                    <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
+                                                    <option data-countryCode="WF" value="681">Wallis Futuna (+681)</option>
+                                                    <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
+                                                    <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
+                                                    <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                                                    <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                                                </select>
+                                                <label for="code-country" class="register__form-droplist-icon">
+                                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                                </label>
+                                            </div>
+                                            <div class="register__form-group">
+                                                <label for="phone-number" class="register__form-group-title">Số điện thoại</label>
+                                                <input id="phone-number" required inputmode="tel" placeholder="Nhập số điện thoại" class="register__form-input">
+                                            </div>
+                                        </div>
+
+                                        <div class="register__form-text">
+                                            Chúng tôi sẽ gọi điện hoặc nhắn tin cho bạn để xác nhận số điện thoại. Có áp dụng phí dữ liệu và phí tin nhắn tiêu chuẩn.
+                                            <a href="#" class="register__form-text-link">Chính sách về quyền riêng tư</a>
+                                        </div>
+
+                                        <button class="register__btn--primary"><div>Tiếp tục</div></button>
+    
+                                        <div class="register__line">
+                                            <div class="register__line-text">hoặc</div>
+                                        </div>
+    
+                                        <button class="register__btn--seccondary">
+                                            <div class="register__btn-icon">
+                                                <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"><defs><path id="a" d="M.001 0H24v23.854H.001z"></path></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"></use></mask><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12" fill="#1877F2" mask="url(#b)"></path><path d="M16.671 15.469L17.203 12h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.234-2.686-.234c-2.741 0-4.533 1.66-4.533 4.668V12H7.078v3.469h3.047v8.385a12.09 12.09 0 003.75 0V15.47h2.796" fill="#FFF"></path></g></svg>
+                                            </div>
+                                            <div class="register__btn-text">Tiếp tục với Facebook</div>
+                                        </button>
+                                        <button class="register__btn--seccondary">
+                                            <div class="register__btn-icon">
+                                                <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z" fill="#EA4335"></path><path d="M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z" fill="#4285F4"></path><path d="M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z" fill="#FBBC05"></path><path d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z" fill="#34A853"></path><path d="M0 0h18v18H0V0z"></path></g></svg>
+                                            </div>
+                                            <div class="register__btn-text">Tiếp tục với Google</div>
+                                        </button>
+                                        <button class="register__btn--seccondary">
+                                            <div class="register__btn-icon">
+                                                <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"><path d="m13.3 2.1a5.1 5.1 0 0 1 3.8-2.1 5.1 5.1 0 0 1 -1.2 3.8 4.1 4.1 0 0 1 -3.6 1.7 4.5 4.5 0 0 1 1-3.4zm-5 3.7c-2.8 0-5.8 2.5-5.8 7.3 0 4.9 3.5 10.9 6.3 10.9 1 0 2.5-1 4-1s2.6.9 4 .9c3.1 0 5.3-6.4 5.3-6.4a5.3 5.3 0 0 1 -3.2-4.9 5.2 5.2 0 0 1 2.6-4.5 5.4 5.4 0 0 0 -4.7-2.4c-2 0-3.5 1.1-4.3 1.1-.9 0-2.4-1-4.2-1z"></path></svg>
+                                            </div>
+                                            <div class="register__btn-text">Tiếp tục với Apple</div>
+                                        </button>
+                                        <button class="register__btn--seccondary">
+                                            <div class="register__btn-icon">
+                                                <ion-icon class="register__btn-icon-mail" name="mail-outline"></ion-icon>
+                                            </div>
+                                            <div class="register__btn-text">Tiếp tục với Email</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Lúc đăng nhập -->
+
+                            <div tabindex="0" class="navbar-user-button">
+                                <ion-icon class="navbar-user-button-icon-bar" name="menu"></ion-icon>
+                                <img src="./assets/image/user.png" alt="" class="navbar-user-button-user-avatar">
+                                <div class="navbar-user-button-user-notify">7</div>
+                            </div>
+                            
+                            <ul class="user-profile-menu">
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link text-bold">Tin nhắn</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link text-bold">Thông báo</a>
+                                </li>
+                                
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link text-bold">Danh sách yêu thích</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <div class="user-profile-menu-item-line"></div>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Lịch bóng đá</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Tổ chức trải nghiệm</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Tài khoản</a>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <div class="user-profile-menu-item-line"></div>
+                                </li>
+                                <li class="user-profile-menu-item">
+                                    <a href="#" class="user-profile-menu-link">Trợ giúp</a>
+                                </li>
+                                <li class="user-profile-menu-item logOut">
+                                    <a href="" class="user-profile-menu-link">Đăng xuất</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid wide header__search">
+                <div class="header__search-title">Lướt xem câu chuyện trên khắp thế giới</div>
+                <button class="header__search-btn"><a href="#" class="header__search-btn-link">Tìm kiếm linh hoạt</a></button>
+            </div>
+
+        </header>
+        
+        <div class="container">
+            <div class="grid wide">
+                <!-- Explore -->
+                <div class="explore-recent">
+                    <h2 class="container__header">
+                        Khám phá
+                    </h2>
+                    <div class="explore-recent__group">
+                        <div class="row explore-recent__list">
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/news.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Thời sự</h3>
+                                    <div class="explore-recent__info-time">12 tin mới</div>
+                                </div>
+                            </a>
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/vision.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Góc nhìn</h3>
+                                    <div class="explore-recent__info-time">28 tin mới</div>
+                                </div>
+                            </a>
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/video.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Video</h3>
+                                    <div class="explore-recent__info-time">20 tin mới</div>
+                                </div>
+                            </a>
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/podcast.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Podcast</h3>
+                                    <div class="explore-recent__info-time">19 tin mới</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row explore-recent__list">
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/business.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Kinh doanh</h3>
+                                    <div class="explore-recent__info-time">14 tin mới</div>
+                                </div>
+                            </a>
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/scientist.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Khoa học</h3>
+                                    <div class="explore-recent__info-time">2 tin mới</div>
+                                </div>
+                            </a>
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/enter.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Giải trí</h3>
+                                    <div class="explore-recent__info-time">6 tin mới</div>
+                                </div>
+                            </a>
+                            <a href="#" class="col l-3 l-m-4 m-4 explore-recent__item">
+                                <img src="./assets/image/discovery/studying.png" alt="" class="explore-recent__img">
+                                <div class="explore-recent__info">
+                                    <h3 class="explore-recent__info-header">Giáo dục</h3>
+                                    <div class="explore-recent__info-time">6 tin mới</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anywhere -->
+                <div class="anywhere swiper">
+                    <h2 class="container__header">
+                        Chủ đề quan tâm gần đây
+                        <div class="arrow-btn-list">
+                            <button class="arrow-btn-item arrow-back-btn arrow-btn-item--disable">
+                                <ion-icon class="arrow-btn-icon" name="chevron-back-outline"></ion-icon>
+                            </button>
+                            <button class="arrow-btn-item arrow-next-btn">
+                                <ion-icon class="arrow-btn-icon" name="chevron-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </h2>
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="" class="anywhere__item js-anywhere__item">
+                                <div class="anywhere__img" style="background-image: url('https://nld.mediacdn.vn/291774122806476800/2022/6/6/9-u-23-vn-1654519185070882299569.jpg');"></div>
+                                <div class="anywhere__info">Bóng đá Việt Nam</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="anywhere__item js-anywhere__item">
+                                <div class="anywhere__img" style="background-image: url(./assets/image/anywhere/special.jpg);"></div>
+                                <div class="anywhere__info">Du lịch biển</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="anywhere__item js-anywhere__item">
+                                <div class="anywhere__img" style="background-image: url(./assets/image/anywhere/thehouse.jpg);"></div>
+                                <div class="anywhere__info">Trang trí nhà cửa</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="anywhere__item js-anywhere__item">
+                                <div class="anywhere__img" style="background-image: url('https://images.news18.com/ibnlive/uploads/2022/04/pets-16496404503x2.jpg?im=Resize,width=360,aspect=fit,type=normal?im=Resize,width=320,aspect=fit,type=normal');"></div>
+                                <div class="anywhere__info">Chăm sóc thú cưng</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Try hosting -->
+                <a href="#" class="row try-hosting">
+                    <div class="col l-6 l-m-6 m-7 try-hosting__info">
+                        <h3 class="try-hosting__heading">Câu chuyện khởi nghiệp thành công</h3>
+                        <div class="try-hosting__dsc">Lorem ipsum dolor sit amet, consectetur</div>
+                        <button class="try-hosting__btn">Tìm hiểu thêm</button>
+                    </div>
+                </a>
+
+                <!-- Discover -->
+                <div class="discover">
+                    <h2 class="container__header">
+                        Khám phá các chương trình thú vị
+                    </h2>
+                    <div class="row discover__list">
+                        <div class="col l-4 l-m-4 m-4 c-10">
+                            <a href="#" class="discover__item">
+                                <div class="discover-img" style="background-image: url(./assets/image/discover/discover1.webp);"></div>
+                                <div class="discover__info">
+                                    <div class="discover__info-title">Những trải nghiệm chuyến đi</div>
+                                    <div class="discover__info-dsc">Lorem ipsum dolor sit amet, consectetur.</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 l-m-4 m-4 c-10">
+                            <a href="#" class="discover__item">
+                                <div class="discover-img" style="background-image: url(./assets/image/discover/discover2.webp);"></div>
+                                <div class="discover__info">
+                                    <div class="discover__info-title">Chương trình nấu ăn tại nhà</div>
+                                    <div class="discover__info-dsc">Lorem ipsum dolor sit amet, consectetur.</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 l-m-4 m-4 c-10">
+                            <a href="#" class="discover__item">
+                                <div class="discover-img" style="background-image: url(./assets/image/discover/discover3.webp);"></div>
+                                <div class="discover__info">
+                                    <div class="discover__info-title">Vận động viên Olympic & Paralympic</div>
+                                    <div class="discover__info-dsc">Lorem ipsum dolor sit amet, consectetur</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover">
+                    <h2 class="container__header">
+                        Khám phá ẩm thực mọi miền
+                    </h2>
+                    
+                    <section class="home" id="home">
+            
+                        <div class="swiper home-slider">
+                     
+                           <div class="swiper-wrapper">
+                     
+                              <div class="swiper-slide slide" style="background: url('https://bcp.cdnchinhphu.vn/334894974524682240/2022/1/28/anh-1-16433449580121043960050.jpg') no-repeat;">
+                                 <div class="content">
+                                    <span>outstanding food</span>
+                                    <h3>Ẩm thực Thủ Đô</h3>
+                                    <a href="#" class="btn">Tìm hiểu thêm</a>
+                                 </div>
+                              </div>
+                     
+                              <div class="swiper-slide slide" style="background: url('https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng%208/Ng%C3%A0y_16/vietnamese_traditional_food_phot-1629087604389.jpg') no-repeat;">
+                                 <div class="content">
+                                    <span>outstanding food</span>
+                                    <h3>Hương Vị Miền Trung</h3>
+                                    <a href="#" class="btn">Tìm hiểu thêm</a>
+                                 </div>
+                              </div>
+                     
+                              <div class="swiper-slide slide" style="background: url('https://file.hstatic.net/1000054905/file/lau-mam-mien-tay_7f06645c5f8344bf939a734afba04482.jpg') no-repeat;">
+                                 <div class="content">
+                                    <span>outstanding food</span>
+                                    <h3>Đặc sắc miền tây</h3>
+                                    <a href="#" class="btn">Tìm hiểu thêm</a>
+                                 </div>
+                              </div>
+                     
+                           </div>
+                     
+                           <div class="swiper-button-next"></div>
+                           <div class="swiper-button-prev"></div>
+                     
+                        </div>
+                     
+                    </section>
+                    
+                </div>
+
+                <div class="discover">
+                    
+                    
+                    
+                    <section class="about" id="about">
+            
+                        <div class="image">
+                           <img src="https://www.nicepng.com/png/full/162-1625191_corvette-car-transparent-background-corvette-stingray-png.png" alt="">
+                        </div>
+                     
+                        <div class="content">
+                           <h3 class="title">Xe của bạn và của tôi</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi optio at, saepe accusamus dolorum, quos eos nesciunt amet exercitationem illum quis nostrum, repellat quaerat eum debitis fugit alias magnam omnis!</p>
+                           <a href="#" class="btn">Tìm hiểu thêm</a>
+                           <div class="icons-container">
+                              <div class="icons">
+                                 <img src="./assets/image/home-slider/about-icon-1.png" alt="">
+                                 <h3>Sửa chữa</h3>
+                              </div>
+                              <div class="icons">
+                                 <img src="./assets/image/home-slider/about-icon-2.png" alt="">
+                                 <h3>Nhiên liệu</h3>
+                              </div>
+                              <div class="icons">
+                                 <img src="./assets/image/home-slider/about-icon-3.png" alt="">
+                                 <h3>Mẫu xe mới</h3>
+                              </div>
+                           </div>
+                        </div>
+                     
+                     </section>
+                    
+                </div>
+
+                <div class="discover">
+                    
+
+                    
+                    <section class="food" id="food">
+
+                        <div class="heading">  
+                           <span>popular chanel</span>
+                           <h3>our poscast</h3>
+                        </div>
+                     
+                        <div class="swiper food-slider">
+                     
+                           <div class="swiper-wrapper">
+                     
+                              <div class="swiper-slide slide" data-name="food-1">
+                                 <img src="https://cdn-icons-png.flaticon.com/512/4481/4481259.png" alt="">
+                                 <h3>Tâm sự</h3>
+                                 <div class="price">12:00</div>
+                              </div>
+                     
+                              <div class="swiper-slide slide" data-name="food-2">
+                                 <img src="https://cdn-icons.flaticon.com/png/512/1612/premium/1612924.png?token=exp=1657735338~hmac=84ab983d22b9260063d1e210461f608a" alt="">
+                                 <h3>Ly hôn</h3>
+                                 <div class="price">39:00</div>
+                              </div>
+                     
+                              <div class="swiper-slide slide" data-name="food-3">
+                                 <img src="https://cdn-icons-png.flaticon.com/512/4497/4497773.png" alt="">
+                                 <h3>Bạn ổn không?</h3>
+                                 <div class="price">19:55</div>
+                              </div>
+                     
+                              <div class="swiper-slide slide" data-name="food-4">
+                                 <img src="https://cdn-icons-png.flaticon.com/512/5695/5695753.png" alt="">
+                                 <h3>Tiền làm gì?</h3>
+                                 <div class="price">29:18</div>
+                              </div>
+                     
+                              <div class="swiper-slide slide" data-name="food-5">
+                                 <img src="https://cdn-icons-png.flaticon.com/512/4497/4497807.png" alt="">
+                                 <h3>Úp mở 18+</h3>
+                                 <div class="price">49:59</div>
+                              </div>
+                     
+                           </div>
+                     
+                           <div class="swiper-pagination"></div>
+                     
+                        </div>
+                     
+                    </section>
+
+
+                    <section class="food-preview-container">
+
+            
+                        <div id="close-preview" class="fas fa-times"></div>
+                     
+                        <div class="food-preview" data-target="food-1">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4481/4481259.png" alt="">
+                            <h3>Tâm sự</h3>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, hic!</p>
+                            <div class="price">12:00</div>
+                            <a href="#" class="btn">Cùng nghe nhé!</a>
+                        </div>
+                     
+                        <div class="food-preview" data-target="food-2">
+                            <img src="https://cdn-icons.flaticon.com/png/512/1612/premium/1612924.png?token=exp=1657735338~hmac=84ab983d22b9260063d1e210461f608a" alt="">
+                            <h3>Ly hôn</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, hic!</p>
+                            <div class="price">39:00</div>
+                            <a href="#" class="btn">Cùng nghe nhé!</a>
+                        
+                        </div>
+                     
+                        <div class="food-preview" data-target="food-3">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4497/4497773.png" alt="">
+                            <h3>Bạn ổn không?</h3>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, hic!</p>
+                            <div class="price">19:55</div>
+                            <a href="#" class="btn">Cùng nghe nhé!</a>
+                        </div>
+                     
+                        <div class="food-preview" data-target="food-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5695/5695753.png" alt="">
+                            <h3>Tiền làm gì?</h3>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, hic!</p>
+                            <div class="price">29:18</div>
+                            <a href="#" class="btn">Cùng nghe nhé!</a>
+
+                           
+                                 
+                                 
+                        </div>
+                     
+                        <div class="food-preview" data-target="food-5">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4497/4497807.png" alt="">
+                            <h3>Úp mở 18+</h3>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, hic!</p>
+                            <div class="price">49:59</div>
+                            <a href="#" class="btn">Cùng nghe nhé!</a>
+                        </div>
+
+
+                        
+                                 
+                                 
+                     
+                    </section>
+                </div>
+
+                <section class="gallery" id="gallery">
+
+                    <div class="heading">
+                       <span>our stories</span>
+                       <h3>Những câu chuyện xung quanh ta</h3>
+                    </div>
+                 
+                    <div class="gallery-container">
+                 
+                       <a href="https://static.workaway.info/travelphotos/2016/10/org/887212569749_147748851304737.jpg" class="box">
+                          <img src="https://static.workaway.info/travelphotos/2016/10/org/887212569749_147748851304737.jpg" alt="">
+                          <div class="icon"> <i class="fas fa-plus"></i> </div>
+                       </a>
+                 
+                       <a href="https://static.kinhtedothi.vn/w960/images/upload/2021/12/23/pho-co-ha-noi1.jpg" class="box">
+                          <img src="https://static.kinhtedothi.vn/w960/images/upload/2021/12/23/pho-co-ha-noi1.jpg" alt="">
+                          <div class="icon"> <i class="fas fa-plus"></i> </div>
+                       </a>
+                 
+                       <a href="https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/2001357727691/Private%2520Transfer%2520between%2520Da%2520Nang%2520City%2520Center%2520and%2520Hoi%2520An-d727b3bc-cb05-4d31-b0d3-6e3ee1bc49a7.jpeg?tr=q-60,c-at_max,w-720,h-1280&_src=imagekit" class="box">
+                          <img src="https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/2001357727691/Private%2520Transfer%2520between%2520Da%2520Nang%2520City%2520Center%2520and%2520Hoi%2520An-d727b3bc-cb05-4d31-b0d3-6e3ee1bc49a7.jpeg?tr=q-60,c-at_max,w-720,h-1280&_src=imagekit" alt="">
+                          <div class="icon"> <i class="fas fa-plus"></i> </div>
+                       </a>
+                 
+                       <a href="https://media-cdn.tripadvisor.com/media/photo-s/1c/64/69/01/c-do-hu-t-ng-la-th-do.jpg" class="box">
+                          <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/64/69/01/c-do-hu-t-ng-la-th-do.jpg" alt="">
+                          <div class="icon"> <i class="fas fa-plus"></i> </div>
+                       </a>
+                       
+                       <a href="https://www.fiditour.com/Upload/images/2019/ban-tin/DuLichBien01.JPG" class="box">
+                          <img src="https://www.fiditour.com/Upload/images/2019/ban-tin/DuLichBien01.JPG" alt="">
+                          <div class="icon"> <i class="fas fa-plus"></i> </div>
+                       </a>
+                 
+                       <a href="https://www.quangbinh.gov.vn/3cms/upload/qbportal/Image/TintucSuKien/2020/04/SD600.jpg" class="box">
+                          <img src="https://www.quangbinh.gov.vn/3cms/upload/qbportal/Image/TintucSuKien/2020/04/SD600.jpg" alt="">
+                          <div class="icon"> <i class="fas fa-plus"></i> </div>
+                       </a>
+                 
+                    </div>
+                 
+                </section>
+
+                <section class="blogs" id="blogs">
+
+                    <div class="heading">
+                       <span>Go Abroad</span>
+                       <h3>Diễn biến quốc tế</h3>
+                    </div>
+                 
+                    <div class="swiper blogs-slider">
+                 
+                       <div class="swiper-wrapper">
+                 
+                          <div class="swiper-slide slide">
+                             <div class="image">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/13/FXjMxmDXwAABbRi-7567-1657730963.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=oc87GVMS109zvHW33OG_yw" alt="">
+                                <span>Tin mới</span>
+                             </div>
+                             <div class="content">
+                                <div class="icon">
+                                   <a href="#"> <i class="fas fa-calendar"></i> 14st July, 2022 </a>
+                                   <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                                </div>
+                                <a href="#" class="title">Triều Tiên công nhận độc lập</a>
+                                <p>Truyền thông Nga và lãnh đạo Cộng hòa Nhân dân Donetsk tự xưng cho biết Triều Tiên đã công nhận độc lập hai vùng ly khai miền đông Ukraine.</p>
+                                <a href="#" class="btn">read more</a>
+                             </div>
+                          </div>
+                 
+                          <div class="swiper-slide slide">
+                             <div class="image">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/13/JTNGJSMNF5KSTKG5MTZRX5GZ5M-jpe-8914-9461-1657705048.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=PGuHCpcfZXC-rYTel6minQ" alt="">
+                                <span>Tin mới</span>
+                             </div>
+                             <div class="content">
+                                <div class="icon">
+                                   <a href="#"> <i class="fas fa-calendar"></i> 14st July, 2022 </a>
+                                   <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                                </div>
+                                <a href="#" class="title">Thụy Sĩ - mắt xích yếu trên mặt trận phương Tây trừng phạt Nga</a>
+                                <p>Thụy Sĩ cam kết cùng phương Tây trừng phạt các nhà tài phiệt Nga, song đến nay, những đóng góp của họ là không đáng kể.</p>
+                                <a href="#" class="btn">read more</a>
+                             </div>
+                          </div>
+                 
+                          <div class="swiper-slide slide">
+                             <div class="image">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/13/download-5300-1657682256-jpeg-6342-1657726519.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=qEpqFiHP8tN9DGYlUH4U8w" alt="">
+                                <span>Tin mới</span>
+                             </div>
+                             <div class="content">
+                                <div class="icon">
+                                   <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2022 </a>
+                                   <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                                </div>
+                                <a href="#" class="title">Tổng thống Sri Lanka có thể tới Singapore</a>
+                                <p>Tổng thống Sri Lanka Rajapaksa được cho là sẽ từ Maldives bay tới Singapore, sau khi rời đất nước của mình giữa khủng hoảng nghiêm trọng.</p>
+                                <a href="#" class="btn">read more</a>
+                             </div>
+                          </div>
+                 
+                          <div class="swiper-slide slide">
+                             <div class="image">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/13/Myanmar-jpeg-5734-1643456897-j-1215-5897-1657723062.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=FBwT6DfEzwzFSW1288sfSw" alt="">
+                                <span>Tin mới</span>
+                             </div>
+                             <div class="content">
+                                <div class="icon">
+                                   <a href="#"> <i class="fas fa-calendar"></i> 14st July, 2022 </a>
+                                   <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                                </div>
+                                <a href="#" class="title">Nổ bom gần trung tâm thương mại Myanmar, hai người chết</a>
+                                <p>Vụ nổ bom xảy ra gần một trung tâm thương mại ở Yangon chiều nay khiến ít nhất hai người thiệt mạng và 11 người bị thương.</p>
+                                <a href="#" class="btn">read more</a>
+                             </div>
+                          </div>
+                 
+                          <div class="swiper-slide slide">
+                             <div class="image">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/13/nhat-ban-7433-1618449508-7211-3127-2708-1657716183.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=2k01Y2X6SBB4uJiT2PmZEQ" alt="">
+                                <span>Tin mới</span>
+                             </div>
+                             <div class="content">
+                                <div class="icon">
+                                   <a href="#"> <i class="fas fa-calendar"></i> 14st July, 2022 </a>
+                                   <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                                </div>
+                                <a href="#" class="title">Cựu lãnh đạo nhà máy Fukushima phải bồi thường 95 tỷ USD</a>
+                                <p>Tòa án ở Tokyo yêu cầu những người vận hành nhà máy Fukushima bồi thường thiệt hại 94,8 tỷ USD vì thảm họa hạt nhân năm 2011.</p>
+                                <a href="#" class="btn">read more</a>
+                             </div>
+                          </div>
+                 
+                          <div class="swiper-slide slide">
+                             <div class="image">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/12/blinken-afp-9-7-g20-indonesia-4038-8757-1657600113.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=N1xNucJ2BAESWdt01fjVYA" alt="">
+                                <span>Tin mới</span>
+                             </div>
+                             <div class="content">
+                                <div class="icon">
+                                   <a href="#"> <i class="fas fa-calendar"></i> 14st July, 2022 </a>
+                                   <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                                </div>
+                                <a href="#" class="title">Mỹ nguy cơ phạm sai lầm khi lạnh nhạt với Nga</a>
+                                <p>Ngoại trưởng Blinken không trao đổi với bất kỳ quan chức Nga nào kể từ khi xung đột Ukraine nổ ra, nhưng đây có thể là chiến thuật sai lầm.</p>
+                                <a href="#" class="btn">read more</a>
+                             </div>
+                          </div>
+                 
+                       </div>
+                 
+                       <div class="swiper-pagination"></div>
+                 
+                    </div>
+                 
+                 </section>
+
+
+                
+                
+            </div>
+        </div>
+
+
+
+
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="footer__content">
+                    <div class="row footer__row">
+                        <div class="col footer__col l-3 c-12">
+                            <h3 class="footer__heading">GIỚI THIỆU</h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Trang chủ</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Video</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Podcasts</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Ảnh</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Infographics</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Mới nhất</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Xem nhiều</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Tin nóng</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Thư của nhà sáng lập</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Cơ hội nghề nghiệp</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col footer__col l-3 c-12">
+                            <h3 class="footer__heading">CỘNG ĐỒNG</h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Thời sự</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Góc nhìn</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Thế giới</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Kinh doanh</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Giải trí</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col footer__col l-3 c-12">
+                            <h3 class="footer__heading">Đời sống - giải trí</h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Thể thao</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Pháp luật</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Pháp luật</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Sức khỏe</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Đời sống</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Du lịch</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col footer__col l-3 c-12">
+                            <h3 class="footer__heading">Công nghệ</h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Khoa học</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Số hóa</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Xe</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">Smart Phones</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__item-link">IOT Device</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright-name">© 2021 VnExpress, Inc.</div>
+                        <div class="footer__copyright-text">
+                            <div class="footer__copyright-text-dot">·</div>
+                            <a href="#" class="footer__copyright-text-link">Quyền riêng tư</a>
+                            <div class="footer__copyright-text-dot">·</div>
+                            <a href="#" class="footer__copyright-text-link">Điều khoản</a>
+                            <div class="footer__copyright-text-dot">·</div>
+                            <a href="#" class="footer__copyright-text-link">Sơ đồ trang web</a>
+                        </div>
+                    </div>
+                    <div class="footer__setting-social">
+                        <div class="footer__setting">
+                            <label for="region-on-off" class="footer__setting-item">
+                                <ion-icon class="footer__setting-item-icon" name="earth-sharp"></ion-icon>
+                                <div class="footer__setting-item-link">Tiếng Việt (VN)</div>
+                            </label>
+                            <label for="region-on-off" class="footer__setting-item">
+                                <div class="footer__setting-item-icon">đ</div>
+                                <div class="footer__setting-item-link">VND</div>
+                            </label>
+                        </div>
+                        <ul class="footer__social">
+                            <li class="footer__social-item">
+                                <a href="#" class="footer__social-link">
+                                    <ion-icon class="footer__social-icon" name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="#" class="footer__social-link">
+                                    <ion-icon class="footer__social-icon" name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="#" class="footer__social-link">
+                                    <ion-icon class="footer__social-icon" name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bottom Navbar Mobile -->
+        <div class="navbar-mobile">
+            <ul class="navbar-mobile-list">
+                <li class="navbar-mobile-item navbar-mobile-item--active">
+                    <a href="#" class="navbar-mobile-link">
+                        <ion-icon class="navbar-mobile-icon" name="search-outline"></ion-icon>
+                        <div class="navbar-mobile-text">Khám phá</div>
+                    </a>
+                </li>
+                <li class="navbar-mobile-wishlists">
+                    <a href="#" class="navbar-mobile-link">
+                        <ion-icon class="navbar-mobile-icon" name="heart-outline"></ion-icon>
+                        <div class="navbar-mobile-text">Yêu thích</div>
+                    </a>
+                </li>
+                <li class="navbar-mobile-login">
+                    <a href="#" class="navbar-mobile-link">
+                        <ion-icon class="navbar-mobile-icon" name="person-circle-outline"></ion-icon>
+                        <div class="navbar-mobile-text">Đăng nhập</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Seclect nation and language -->
+        <input type="checkbox" id="region-on-off" hidden>
+
+        <div class="modal-select-region">
+
+            <label for="region-on-off" class="navbar-user-region__overlay"></label>
+            
+            <div class="region-list">
+                <label for="region-on-off" class="region-list-close">
+                    <ion-icon class="region-list-close-icon" name="close-outline"></ion-icon>
+                </label>
+                <div class="region-list-container">
+                    <input type="radio" name="region-and-money" id="language-selector" hidden checked>
+                    <input type="radio" name="region-and-money" id="money-selector" hidden>
+                    <div class="region-list-header">
+                        <label for="language-selector" class="region-list-header-language">Ngôn ngữ & Khu vực</label>
+                        <label for="money-selector" class="region-list-header-money">Loại tiền tệ</label>
+                    </div>
+                    <div class="region-list-body">
+                        <div class="region-list-title language-section">Chọn ngôn ngữ & khu vực</div>
+                        <ul class="row sm-gutter region-list-item language-section">
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6 region-info--seclected">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Tiếng Việt</div>
+                                    <div class="region-info-nation">Việt Nam</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Azərbaycan dili</div>
+                                    <div class="region-info-nation">Azərbaycan</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Bahasa Indonesia</div>
+                                    <div class="region-info-nation">Indonesia</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Bosanski</div>
+                                    <div class="region-info-nation">Bosna i Hercegovina</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Català</div>
+                                    <div class="region-info-nation">Espanya</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Čeština</div>
+                                    <div class="region-info-nation">Česká republika</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Crnogorski</div>
+                                    <div class="region-info-nation">Crna Gora</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Dansk</div>
+                                    <div class="region-info-nation">Danmark</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Deutsch</div>
+                                    <div class="region-info-nation">Deutschland</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Deutsch</div>
+                                    <div class="region-info-nation">Österreich</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Deutsch</div>
+                                    <div class="region-info-nation">Schweiz</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Eesti</div>
+                                    <div class="region-info-nation">Eesti</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">Australia</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">Canada</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">India</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">Ireland</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">New Zealand</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">Singapore</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">United Kingdom</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">English</div>
+                                    <div class="region-info-nation">United States</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Español</div>
+                                    <div class="region-info-nation">Argentina</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Español</div>
+                                    <div class="region-info-nation">Belice</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Español</div>
+                                    <div class="region-info-nation">Colombia</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Français</div>
+                                    <div class="region-info-nation">Canada</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Français</div>
+                                    <div class="region-info-nation">France</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Italiano</div>
+                                    <div class="region-info-nation">Italia</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Nederlands</div>
+                                    <div class="region-info-nation">België</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Português</div>
+                                    <div class="region-info-nation">Portugal</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Türkçe</div>
+                                    <div class="region-info-nation">Türkiye</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Ελληνικά</div>
+                                    <div class="region-info-nation">Ελλάδα</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Македонски</div>
+                                    <div class="region-info-nation">Северна Македонија</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Русский</div>
+                                    <div class="region-info-nation">Россия</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Українська</div>
+                                    <div class="region-info-nation">Україна</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">ქართული</div>
+                                    <div class="region-info-nation">საქართველო</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Հայերեն</div>
+                                    <div class="region-info-nation">Հայաստան</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">العربية</div>
+                                    <div class="region-info-nation">العالم</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">हिन्दी</div>
+                                    <div class="region-info-nation">भारत</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">ไทย</div>
+                                    <div class="region-info-nation">ประเทศไทย</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">한국어</div>
+                                    <div class="region-info-nation">대한민국</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">日本語</div>
+                                    <div class="region-info-nation">日本</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">简体中文</div>
+                                    <div class="region-info-nation">美国</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">繁體中文</div>
+                                    <div class="region-info-nation">美國</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">简体中文</div>
+                                    <div class="region-info-nation">中国</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">繁體中文</div>
+                                    <div class="region-info-nation">香港</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">繁體中文</div>
+                                    <div class="region-info-nation">台灣</div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="region-list-title money-section">Chọn loại tiền tệ</div>
+                        <ul class="row sm-gutter region-list-item money-section">
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6 region-info--seclected">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Việt Nam Đồng</div>
+                                    <div class="region-info-nation">VND - đ</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la Mỹ</div>
+                                    <div class="region-info-nation">USD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Baht Thái Lan</div>
+                                    <div class="region-info-nation">THB - ฿</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Bảng Anh</div>
+                                    <div class="region-info-nation">GBP - £</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Colon Costa Rica</div>
+                                    <div class="region-info-nation">CRC - ₡</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Dirham Ma-rốc</div>
+                                    <div class="region-info-nation">MAD</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Euro</div>
+                                    <div class="region-info-nation">EUR - €</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Forint Hungary</div>
+                                    <div class="region-info-nation">HUF - Ft</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Franc Thụy Sĩ</div>
+                                    <div class="region-info-nation">CHF</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Koruna Séc</div>
+                                    <div class="region-info-nation">CZK - Kč</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Krona Thụy Điển</div>
+                                    <div class="region-info-nation">SEK - kr</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Krone Na Uy</div>
+                                    <div class="region-info-nation">NOK - kr</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Krone Đan Mạch</div>
+                                    <div class="region-info-nation">DKK - kr</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Kuna Croatia</div>
+                                    <div class="region-info-nation">HRK - kn</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Leu Rumani</div>
+                                    <div class="region-info-nation">RON - lei</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Lev Bulgaria</div>
+                                    <div class="region-info-nation">BGN - лв</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Lira Thổ Nhĩ Kỳ</div>
+                                    <div class="region-info-nation">TRY - ₺</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Nhân dân tệ</div>
+                                    <div class="region-info-nation">CNY - ￥</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Peso Chile</div>
+                                    <div class="region-info-nation">CLP - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Peso Colombia</div>
+                                    <div class="region-info-nation">COP - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Peso Mexico</div>
+                                    <div class="region-info-nation">MXN - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Peso Philippines</div>
+                                    <div class="region-info-nation">PHP - ₱</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Peso Uruguay</div>
+                                    <div class="region-info-nation">UYU - $U</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Rand Nam Phi</div>
+                                    <div class="region-info-nation">ZAR - R</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Real Brazil</div>
+                                    <div class="region-info-nation">BRL - R$</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Ringgit Malaysia</div>
+                                    <div class="region-info-nation">MYR - RM</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Riyal Ả Rập Saudi</div>
+                                    <div class="region-info-nation">SAR - SR</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Rupee Ấn Độ</div>
+                                    <div class="region-info-nation">INR - ₹</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Shekel Israel mới</div>
+                                    <div class="region-info-nation">ILS - ₪</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Sol Peru</div>
+                                    <div class="region-info-nation">PEN - S/</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Won Hàn Quốc</div>
+                                    <div class="region-info-nation">KRW - ₩</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Yên Nhật</div>
+                                    <div class="region-info-nation">JPY - ¥</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Zloty Ba Lan</div>
+                                    <div class="region-info-nation">PLN - zł</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la Canada</div>
+                                    <div class="region-info-nation">CAD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la Hồng Kông</div>
+                                    <div class="region-info-nation">HKD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la New Zealand</div>
+                                    <div class="region-info-nation">NZD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la Singapore</div>
+                                    <div class="region-info-nation">SGD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la Úc</div>
+                                    <div class="region-info-nation">AUD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đô la Đài Loan mới</div>
+                                    <div class="region-info-nation">TWD - $</div>
+                                </a>
+                            </li>
+                            <li class="region-info col l-2-4 l-m-3 m-4 c-6">
+                                <a href="#" class="region-info-link">
+                                    <div class="region-info-language">Đồng rúp Nga</div>
+                                    <div class="region-info-nation">RUB - ₽</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-search-overlay"></div>
+    </div>
+
+    
+    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+
+    <script>
+        lightGallery(document.querySelector('.gallery .gallery-container'));
+     </script>
+</body>
+</html>
+
+<script src="./scripts/main.js"></script>
+<script src="./scripts/calendar.js"></script>
+<script src="./scripts/slide.js"></script>
+
+
+
+
+
